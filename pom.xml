@@ -25,9 +25,6 @@
     <spring-cloud-services.version>2.0.3.RELEASE</spring-cloud-services.version>
     <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
     <spring-cloud-contract.version>2.0.2.RELEASE</spring-cloud-contract.version>
-		<distribution.management.release.id>artifactory-local</distribution.management.release.id>
-		<distribution.management.snapshot.url>http://localhost:8081/artifactory/libs-snapshot-local</distribution.management.snapshot.url>
-		<distribution.management.release.url>http://localhost:8081/artifactory/libs-release-local</distribution.management.release.url>
   </properties>
 
   <dependencies>
@@ -114,15 +111,10 @@
 
 	<distributionManagement>
 		<repository>
-			<id>${distribution.management.release.id}</id>
-			<name>Spring Milestone Repository</name>
-			<url>${distribution.management.release.url}</url>
+            <id>bintray-claymccoy-maven</id>
+            <name>claymccoy-maven</name>
+            <url>https://api.bintray.com/maven/claymccoy/maven/fortune-service</url>
 		</repository>
-		<snapshotRepository>
-			<id>${distribution.management.release.id}</id>
-			<name>Spring Snapshot Repository</name>
-			<url>${distribution.management.snapshot.url}</url>
-		</snapshotRepository>
 	</distributionManagement>
 
   <build>
